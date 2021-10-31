@@ -1,7 +1,18 @@
 const express = require('express'); //da acesso a bliblioteca expressa na pasta node-express-course
 const app = express(); // instancia um construtor
 
+const mockUserData = [
+    {name : 'Mark' },
+    {name : 'Jill'}
+]
+app.get('/users' , function(req, res){
+    res.json({
+        success : true,
+        message : 'successfully got users. Nice!', 
+        users: mockUserData
+    })
 
+})
 
 
 
